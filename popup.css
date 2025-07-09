@@ -1,0 +1,173 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  width: 350px;
+  padding: 15px;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+#startScrapeBtn {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#startScrapeBtn:hover {
+  background-color: #218838;
+}
+
+#clearDoiBtn {
+  background-color: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+#clearDoiBtn:hover {
+  background-color: #c82333;
+}
+
+#status {
+  margin: 15px 0;
+  font-weight: bold;
+  min-height: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  font-family: monospace;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#storage-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#results-count-container {
+  text-align: center;
+  margin: -5px 0 10px 0;
+  padding: 8px;
+  background-color: #e9f5ff;
+  border: 1px solid #b3d7ff;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* Tooltip Styles */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: #aaa;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 140%;
+  left: 50%;
+  margin-left: -110px; /* Half of width */
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

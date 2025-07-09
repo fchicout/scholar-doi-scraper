@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOI Scraper Control</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Scholar DOI Scraper</h1>
+  
+  <form id="scrapeForm">
+    <div class="form-group">
+      <label for="query">Query:</label>
+      <input type="text" id="query" name="query" placeholder="e.g., machine learning" required>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+          <label for="startYear">Start Year:</label>
+          <input type="number" id="startYear" name="startYear" placeholder="e.g., 2020">
+        </div>
+        <div class="form-group">
+          <label for="endYear">End Year:</label>
+          <input type="number" id="endYear" name="endYear" placeholder="e.g., 2024">
+        </div>
+    </div>
+     <div class="form-group">
+        <label for="numPages">
+            Pages to process:
+            <span class="tooltip-container">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Google Scholar limits results to 1000 items (100 pages).</span>
+            </span>
+        </label>
+        <input type="number" id="numPages" name="numPages" value="10" min="1" max="100">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pageDelay">Delay/page (s):</label>
+        <input type="number" id="pageDelay" name="pageDelay" value="5" min="1">
+      </div>
+      <div class="form-group">
+        <label for="batchDelay">Delay/10 pages (s):</label>
+        <input type="number" id="batchDelay" name="batchDelay" value="15" min="1">
+      </div>
+    </div>
+    <button type="submit" id="startScrapeBtn">Start Scraping</button>
+  </form>
+
+  <div id="status">Enter a query to begin.</div>
+  
+  <div id="results-count-container" class="hidden">
+    <strong>Total Results Found:</strong>
+    <span id="totalResults"></span>
+  </div>
+
+  <h2>Saved DOIs</h2>
+  <textarea id="doiList" rows="8" readonly placeholder="Saved DOIs will appear here..."></textarea>
+  
+  <div id="storage-controls">
+    <button id="showDoiBtn">Refresh List</button>
+    <button id="clearDoiBtn">Clear All Saved DOIs</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
