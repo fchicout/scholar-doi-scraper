@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Scholar DOI Scraper",
   "version": "2.1",
-  "description": "A powerful tool to automatically scrape Google Scholar search results across multiple pages, extract article DOIs via the CrossRef API, and save them.",
+  "description": "A tool to automatically scrape Google Scholar search results, extract article DOIs via the CrossRef API, and save them.",
   "author": "Fábio Chicout",
   "homepage_url": "https://github.com/fchicout/scholar-doi-scraper",
   "icons": {
